@@ -4,21 +4,21 @@ using namespace std;
  
 int main()
 {
-    int rows, number = 1;
+    int space, rows = 5;
  
-    cout << "输入行数: ";
-    cin >> rows;
- 
-    for(int i = 1; i <= rows; i++)
+    for(int i = 1; i <= rows; ++i)
     {
-        for(int j = 1; j <= i; ++j)
+        for(space = 1; space <= rows-i; ++space)
         {
-            cout << number << " ";
-            ++number;
+            cout <<"  ";
         }
- 
+     int k = 2*(i-1)+1;
+        while(k>0)
+        {
+            cout << "* ";
+            --k;
+        }
         cout << endl;
-    }
- 
+    }    
     return 0;
 }
